@@ -1,10 +1,8 @@
-let callNumber = 0;
 export async function getRecommendation(
   clinicId,
   page_size = 3,
   page_number = 1
 ) {
-  console.log(++callNumber + '. getRecommendation');
   await new Promise((resolve) => setTimeout(resolve, 250)); // Simulating a DB call
   const allRecords = fakeDatabase.filter((o) => o.clinicId === clinicId);
 
